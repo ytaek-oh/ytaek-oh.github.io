@@ -29,12 +29,12 @@ abstract: >
 ---
 
 <!-- project_page.html -->
+<!--
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="assets/videos/daso.mp4"
-                type="video/mp4">
+        <source src="assets/videos/daso.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
@@ -44,7 +44,7 @@ abstract: >
     </div>
   </div>
 </section>
-
+-->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -85,10 +85,6 @@ abstract: >
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -101,10 +97,6 @@ abstract: >
               As a byproduct of our method, we can also solve the matting problem by ignoring
               samples that fall outside of a bounding box during rendering.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
           </div>
         </div>
       </div>
@@ -156,15 +148,6 @@ abstract: >
           </p>
         </div>
         <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
         </div>
         <!--/ Re-rendering. -->
       </div>
