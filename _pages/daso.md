@@ -5,15 +5,16 @@ permalink: /daso
 description: A new framework DASO, Distribution-Aware Semantics-Oriented Pseudo-label alleviates biases in pseudo-labels under diverse imbalanced semi-supervised learning scenarios.
 keywords: "Semi-supervised learning, Class-imbalanced learning, Long-tailed distribution"
 title: "DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning"
+venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022)"
 pdf: https://ytaek-oh.github.io/assets/pdf/preprint_daso.pdf
 arxiv: https://arxiv.org/abs/2106.05682
 code: https://github.com/ytaek-oh/daso
 bibtex: >
-  @article{oh2021distribution, <br />
-  title={Distribution-aware semantics-oriented pseudo-label for imbalanced semi-supervised learning}, <br />
-  author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
-  journal={arXiv preprint arXiv:2106.05682}, <br />
-  year={2021} <br />
+  @inproceedings{oh2021distribution, <br />
+  &nbsp;&nbsp; title={Distribution-aware semantics-oriented pseudo-label for imbalanced semi-supervised learning}, <br />
+  &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
+  &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
+  &nbsp;&nbsp; year={2022} <br />
   }
 abstract: >
   <p>
@@ -29,22 +30,19 @@ abstract: >
 ---
 
 <!-- project_page.html -->
-<!--
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="assets/videos/daso.mp4" type="video/mp4">
+        <source src="assets/daso/daso.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      <h2 class="subtitle has-text-centered is-size-5">
+        DASO framework for debiasing pseudo-labels by blending two complementary pseudo-labels.
+        Semantic alignment loss further alleviates the bias with balanced feature representations.
       </h2>
     </div>
   </div>
 </section>
--->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -57,102 +55,177 @@ abstract: >
       </div>
     </div>
     <!--/ Abstract. -->
-    {%- if page.video %}
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="{{ page.video }}"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-    {%- endif %}
   </div>
 </section>
 
-
+<!-- Introduction -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3">Introduction</h2> 
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Many real-world datasets exhibit <i>long-tailed</i> distributions. With such class imbalanced data, semi-supervised learning (SSL) methods produce biased pseudo-labels, which can further bias the model during training.
+            The bias of pseudo-labels also depends on <i>class distribution mismatch</i> between labeled and unlabeled data, in addition to the class-imbalance.
+          </p>
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered is-vcentered">
+            <!-- figure -->
+            <div class="column">
+              <img src="assets/daso/teaser.PNG"/>
+            </div>
+            <!--/ figure -->
+            <!-- caption -->
+            <div class="column">
+                <h2 class="subtitle has-text-justified">
+                  DASO reduces overall bias in pseudo-labels caused by imbalanced data, by blending two complementary pseudo-labels from different classifiers. We conceptually illustrate the bias as relative pseudo-label size, meaning that pseudo-label size is normalized by the actual label size.
+                </h2>
+            </div>
+            <!--/ caption -->
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We present a new imbalanced SSL method for debiasing pseudo-labels under class-imbalanced data, while discarding the common assumption that class distributions of labeled data and unlabeled data are identical. 
           </p>
         </div>
       </div>
-      <!--/ Visual Effects. -->
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-    <!--/ Matting. -->
-    <!-- Animation. -->
+  </div>
+</section>
+<!--/ introduction -->
+
+<!-- motivation -->
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h2 class="title is-3">Motivation</h2> 
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            We observe that semantic pseudo-labels from a similarity-based classifier are biased towards minority classes as opposed to linear classifier-based pseudo-labels being biased towards head classes.
+          </p>
+          <p>
+            FixMatch and USADTM are recent methods that learn solely from linear pseudo-labels and semantic pseudo-labels, respectively.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+        <div class="hero-body">
+          <img src="assets/daso/motivation.png"/>
+          <h2 class="my-1 subtitle has-text-centered">
+            Although USADTM improves the recall of minority classes in (a), the precision of those classes is significantly reduced compared to FixMatch in (b). DASO improves the recall of minority classes while maintaining the precision, leading to higher test accuracy.
+          </h2>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Based on the observation, we exploit the linear and semantic pseudo-labels <i>differently</i> in different classes for debaising. For example, when linear pseudo-label points to the majorities, more semantic pseudo-label component contributes to the final pseudo-label to prevent false positives towards head classes, and the vice versa when the linear pseudo-label predicts minority. 
           </p>
         </div>
-        <div class="content has-text-centered">
-        </div>
-        <!--/ Re-rendering. -->
       </div>
     </div>
-    <!--/ Animation. -->
+  </div>
+</section>
+<!--/ motivation -->
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experimental Results</h2> 
+        <div class="content has-text-justified">
+          <p>
+            We use the imbalanced versions of CIFAR-10/100 and STL-10 under diverse cases of imbalances in unlabeled data ($ \gamma_u \neq \gamma_l$), including the same imbalance with labeled data ($ \gamma_u = \gamma_l$). 
+          </p>
+        </div>
+        <!-- same imbalance -->
+        <h3 class="title is-5">Same class imbalance ($ \gamma_l = \gamma_u $)</h3>
+        <div class="content has-text-justified">
+          <p class="mb-4">
+            We compare DASO with several baseline methods, with or without applying class re-balancing strategies such as LA and ABC.
+          </p>
+          <img src="assets/daso/tab1.png"/>
+        </div>
+        <!-- different imbalance -->
+        <h3 class="title is-5">Various class imbalance ($ \gamma_l \neq \gamma_u $)</h3>
+        <div class="content has-text-justified">
+          <p class="mb-4">
+            The class distribution of unlabeled data could be either unknown or arguably different from that of labeled data in real-world. To simulate such scenarios, for CIFAR10-LT, uniform distributions ($ \gamma_u = 1$) and flipped long-tailed distribution with respect to labeled data ($ \gamma_u=1/100 $) are considered. For STL10-LT, we only control the degree of imbalance in labeled data ($ \gamma_l $) due to unknown distribution of unlabeled data.
+          </p>
+          <img src="assets/daso/tab2.png"/>
+        </div>
+        <!-- semi-aves -->
+        <h3 class="title is-5">Realistic Scenarios</h3>
+        <div class="content has-text-justified">
+          <p class="mb-4">
+            For real-world scenarios, long-tailed Semi-Aves benchmark including large unlabeled open-set data is considered. Both labeled data ($ \mathcal{X} $) and unlabeled data ($ \mathcal{U} $) show long-tailed distributions, while $ \mathcal{U} $ contains large open-set class examples ($ \mathcal{U}_{\text{out}} $). We report the results on both cases: $ \mathcal{U} = \mathcal{U}_{\text{in}} $ and $ \mathcal{U} = \mathcal{U}_{\text{in}} + \mathcal{U}_{\text{out}} $.
+          </p>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <img src="assets/daso/tab3.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Results -->
+
+<!-- Analysis -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Analysis</h2> 
+        <div class="content has-text-justified">
+          <p>
+            We qualitatively analyze how DASO improves the performance under imbalanced SSL setup. We consider FixMatch as baseline trained on CIFAR10-LT under $ \gamma=100 $ and $ N_1 = 500 $.
+          </p>
+        </div>
+        <!-- same imbalance -->
+        <h3 class="title is-5">Unbiased pseudo-label improves test accuracy.</h3>
+        <div class="content has-text-justified">
+          <p>
+            DASO significantly improves the recall and test accuracy values on the minority classes, while preserving those from the majority classes.
+          </p>
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-9">
+              <img src="assets/daso/qual1.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Comparison of train curves for the recall and test accuracy values. 
+          </h2>
+        </div>
+        <!-- different imbalance -->
+        <h3 class="title is-5">Tail-class clusters are better identified.</h3>
+        <div class="content has-text-justified">
+          <p>
+            Learning with DASO helps the model to establish tail-class clusters, which can further reduce the biases from the classifier.
+          </p>
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-9">
+              <img src="assets/daso/qual2.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Comparisons of t-SNE from feature representations.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Analysis -->
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -162,17 +235,13 @@ abstract: >
             There's a lot of excellent work that was introduced around the same time as ours.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+            <a href="https://arxiv.org/abs/2112.04564">CoSSL</a> introduces a co-learning framework that decouples the learning of representation and classifier in imbalanced SSL.
           </p>
           <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
+            <a href="https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/">DebiasMatch</a> proposes a general debiased learning for pseudo-labels based on counterfactual reasoning and adaptive margins.
           </p>
           <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            <a href="https://arxiv.org/abs/2204.02070">Spread Spurious Attribute (SSA)</a> proposes a method of adaptive thresholds for pseudo-labeling that does not rely on the assumption: identical class distributions of labeled and unlabeled data (Secs. 4.2 and 5.4).  
           </p>
         </div>
       </div>
