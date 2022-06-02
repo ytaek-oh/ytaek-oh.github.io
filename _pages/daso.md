@@ -9,6 +9,8 @@ venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 202
 pdf: https://ytaek-oh.github.io/assets/pdf/preprint_daso.pdf
 arxiv: https://arxiv.org/abs/2106.05682
 code: https://github.com/ytaek-oh/daso
+slide: slide.pdf
+poster: poster.pdf
 bibtex: >
   @inproceedings{oh2021distribution, <br />
   &nbsp;&nbsp; title={Distribution-aware semantics-oriented pseudo-label for imbalanced semi-supervised learning}, <br />
