@@ -6,7 +6,7 @@ description: A new framework DASO, Distribution-Aware Semantics-Oriented Pseudo-
 keywords: "Semi-supervised learning, Class-imbalanced learning, Long-tailed distribution"
 title: "DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning"
 venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022)"
-pdf: https://ytaek-oh.github.io/assets/pdf/preprint_daso.pdf
+pdf: https://openaccess.thecvf.com/content/CVPR2022/html/Oh_DASO_Distribution-Aware_Semantics-Oriented_Pseudo-Label_for_Imbalanced_Semi-Supervised_Learning_CVPR_2022_paper.html
 arxiv: https://arxiv.org/abs/2106.05682
 code: https://github.com/ytaek-oh/daso
 slide: slide.pdf
@@ -16,7 +16,8 @@ bibtex: >
   &nbsp;&nbsp; title={Distribution-aware semantics-oriented pseudo-label for imbalanced semi-supervised learning}, <br />
   &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
   &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
-  &nbsp;&nbsp; year={2022} <br />
+  &nbsp;&nbsp; year={2022}, <br />
+  &nbsp;&nbsp; pages={9786-9796} <br />
   }
 abstract: >
   <p>
