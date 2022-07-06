@@ -13,7 +13,7 @@ slide: slide.pdf
 poster: poster.pdf
 bibtex: >
   @inproceedings{oh2021distribution, <br />
-  &nbsp;&nbsp; title={Distribution-aware semantics-oriented pseudo-label for imbalanced semi-supervised learning}, <br />
+  &nbsp;&nbsp; title={DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning}, <br />
   &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
   &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
   &nbsp;&nbsp; year={2022}, <br />
