@@ -58,6 +58,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
+cv: cv.pdf
 github_username: ytaek-oh # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: ytaek_oh # your Twitter handle
