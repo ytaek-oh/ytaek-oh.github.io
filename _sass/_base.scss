@@ -99,7 +99,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 24%;
     .address {
       p { display: block; }
     }
@@ -433,6 +433,9 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      .preview {
+        width: 100%;
+      }
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
