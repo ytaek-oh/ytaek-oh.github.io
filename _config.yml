@@ -221,7 +221,7 @@ scholar:
   # See https://github.com/alshedivat/al-folio/issues/357.
   bibtex_filters: [latex, smallcaps, superscript]
   # 'bibtex_skip_fields'     => [ :abstract, :month_numeric ],
-  bibtex_skip_fields: [abstract, abbr, bibtex_show, selected, html, website, code, pdf, eqcontrib_start, eqcontrib_end, arxiv, project, preview, abbrtitle]
+  bibtex_skip_fields: [oral, abstract, abbr, bibtex_show, selected, html, website, code, pdf, eqcontrib_start, eqcontrib_end, arxiv, project, preview, abbrtitle]
   replace_strings: true
   join_strings: true
 
