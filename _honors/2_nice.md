@@ -5,4 +5,4 @@ title: A long announcement with details
 date: 2023-05-01 16:11:00-0400
 ---
 
-<b>2nd place at NICE Challenge</b>, CVPR 2023 NICE Workshop.
+<b>2nd place in NICE Challenge ($5000)</b>, NICE Workshop at CVPR 2023 &nbsp;&nbsp;[<a href="https://codalab.lisn.upsaclay.fr/competitions/10248#results" target="_blank">Codalab</a>]
