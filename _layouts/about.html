@@ -52,6 +52,10 @@ layout: default
           <!-- News -->
           {%- include news.html %}
           {%- endif %}
+          {% if page.honors -%}
+          <!-- Honors -->
+          {%- include honors.html %}
+          {%- endif %}
           {% if page.selected_papers -%}
             <!-- Selected papers -->
             {%- include selected_papers.html %}
