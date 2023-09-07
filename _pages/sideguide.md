@@ -6,11 +6,9 @@ permalink: /sideguide
 description: >
   SideGuide: A Large-scale Sidewalk Dataset for Guiding Impaired People
 keywords: "Object detection, Instance segmentation, Depth estimation, Stereo matching, Assistive computer vision"
-venue: "2022 International Conference on Intelligent Robots and Systems (IROS)"
-pdf: empty
-code: empty
-slide: empty
-poster: empty
+venue: "2020 International Conference on Intelligent Robots and Systems (IROS)"
+pdf: http://ras.papercept.net/images/temp/IROS/files/1873.pdf
+code: https://github.com/ChelseaGH/sidewalk_prototype_AI_Hub
 bibtex: >
   @inproceedings{park2020sideguide,
     &nbsp;&nbsp;title={Sideguide: a large-scale sidewalk dataset for guiding impaired people},
@@ -33,16 +31,29 @@ abstract: >
           <h1 class="title is-2 publication-title">{{ page.title }}</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1</sup>,</span>
+              <a href="#">Kibaek Park</a><sup>1$\small \dagger$</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/site/djkimcv/">Dong-Jin Kim</a><sup>2</sup>,</span>
+              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1$\small \dagger$</sup>,</span>
+            <span class="author-block">
+              <a href="#">Soomin Ham</a><sup>1$\small \dagger$</sup>,</span>
+            <span class="author-block">
+              <a href="https://unist.info/?page_id=194">Kyungdon Joo</a><sup>2$\small \dagger\ast$</sup>,</span><br />
+            <span class="author-block">
+              <a href="#">Hyokyoung Kim</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="#">Hyoyoung Kum</a><sup>3</sup>,</span>
             <span class="author-block">
               <a href="#">In So Kweon</a><sup>1</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST, South Korea.</span>
-            <span class="author-block"><sup>2</sup>UC Berkeley / ICSI, CA.</span>
+            <span class="author-block"><sup>1</sup>KAIST,&nbsp;</span>
+            <span class="author-block"><sup>2</sup>UNIST,&nbsp;</span>
+            <span class="author-block"><sup>2</sup>TestWorks, Inc.</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>$\small \dagger$</sup><em>Equal contributions,</em>&nbsp;</span>
+            <span class="author-block"><sup>$\ast$</sup><em>Work done at KAIST</em>.</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -135,11 +146,10 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="assets/daso/daso.mp4" type="video/mp4">
+        <source src="assets/sideguide/media3_compressed.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered is-size-5">
-        DASO framework for debiasing pseudo-labels by blending two complementary pseudo-labels.
-        Semantic alignment loss further alleviates the bias with balanced feature representations.
+        An assistance system for impaired people by informing obstacles with distances. <br />The video is taken on a wheelchair, where many safety-related obstacles are scattered on the way. <br />Each bounding box is marked with class label and distance.
       </h2>
     </div>
   </div>
@@ -167,29 +177,30 @@ abstract: >
         <h2 class="title is-3">Introduction</h2> 
         <div class="content has-text-justified">
           <p>
-            Many real-world datasets exhibit <i>long-tailed</i> distributions. With such class imbalanced data, semi-supervised learning (SSL) methods produce biased pseudo-labels, which can further bias the model during training.
-            The bias of pseudo-labels also depends on <i>class distribution mismatch</i> between labeled and unlabeled data, in addition to the class-imbalance.
+To date, autonomous driving has been one of the most researched topics. Previous studies have largely been focused on self-driving cars and their driving environment, which has led to ample datasets related to roads (e.g., KITTI [1], Cityscapes [2]). In contrast, there has not been enough data investigating the perspectives of pedestrians and their environments, such as sidewalks. Traditionally for cars, fixed lanes separate cars from other vehicles, which makes it easier to detect moving objects. On the other hand, when it comes to a sidewalk, there are no fixed lanes, and there are lots of objects (e.g., pedestrians, personal mobility vehicles, animals, and bollards) that lack directional consistency. Therefore, in the sidewalk environment, objects often occlude each other (i.e., partially blocked by other objects).
+          </p>
+          <p>
+Our work is the first large-scale dataset (termed the SideGuide) focused on sidewalks, and which can be deployed in the field of recognition to aid impaired or disabled people. We also used a stereo camera system to capture images of sidewalks, which provides ground-truth disparity as well as instance-level annotation (see Fig. 1).
+          </p>
+          <p>
+From the raw data, we annotated 492K images in total for ground-truth (see Table I). Specifically, as instance-level annotation, we generated ground-truth bounding boxes (BB) for 350K images and polygon segmentations for 100K images as a subset of BB. We also generated 180K dense disparity maps from pairs of stereo images. The instance-level annotations and ground-truth disparity provided inference data to the detection model and stereo matching algorithm, respectively, to validate our dataset. The SideGuide was further validated by implementing a prototype that returns the output of object detection and distance of an object from the camera in real-time.
           </p>
         </div>
         <div class="hero-body">
-          <div class="columns is-centered is-vcentered">
-            <!-- figure -->
-            <div class="column">
-              <img src="assets/daso/teaser.PNG"/>
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <img src="assets/sideguide/teaser.png"/>
             </div>
-            <!--/ figure -->
-            <!-- caption -->
-            <div class="column">
-                <h2 class="subtitle has-text-justified">
-                  DASO reduces overall bias in pseudo-labels caused by imbalanced data, by blending two complementary pseudo-labels from different classifiers. We conceptually illustrate the bias as relative pseudo-label size, meaning that pseudo-label size is normalized by the actual label size.
-                </h2>
-            </div>
-            <!--/ caption -->
           </div>
+          <h2 class="my-1 subtitle has-text-centered">
+            <p>
+            An example image-pair and annotation of a sidewalk. (a) Stereo image pair captured by a ZED stereo camera (top and bottom images indicate left and right images, respectively), (b) Instance-level bounding box and polygon mask annotations in the left image, and (c) The ground-truth dense disparity map.
+            </p>
+          </h2>
         </div>
         <div class="content has-text-justified">
           <p>
-            We present a new imbalanced SSL method for debiasing pseudo-labels under class-imbalanced data, while discarding the common assumption that class distributions of labeled data and unlabeled data are identical. 
+Our first large-scale sidewalk dataset, the SideGuide will contribute to reducing the gap between technology and real-world deployment for recognition. This dataset could be useful not only for impaired people, but also for other applications like mobile robotics and assistance for vulnerable road users who are not necessarily visually or mobility impaired.
           </p>
         </div>
       </div>
@@ -199,6 +210,7 @@ abstract: >
 <!--/ introduction -->
 
 <!-- motivation -->
+<!--
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -227,9 +239,11 @@ abstract: >
     </div>
   </div>
 </section>
+-->
 <!--/ motivation -->
 
 <!-- Results -->
+<!--
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -240,7 +254,6 @@ abstract: >
             We use the imbalanced versions of CIFAR-10/100 and STL-10 under diverse cases of imbalances in unlabeled data ($ \gamma_u \neq \gamma_l$), including the same imbalance with labeled data ($ \gamma_u = \gamma_l$). 
           </p>
         </div>
-        <!-- same imbalance -->
         <h3 class="title is-5">Same class imbalance ($ \gamma_l = \gamma_u $)</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
@@ -248,7 +261,6 @@ abstract: >
           </p>
           <img src="assets/daso/tab1.png"/>
         </div>
-        <!-- different imbalance -->
         <h3 class="title is-5">Various class imbalance ($ \gamma_l \neq \gamma_u $)</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
@@ -256,7 +268,6 @@ abstract: >
           </p>
           <img src="assets/daso/tab2.png"/>
         </div>
-        <!-- semi-aves -->
         <h3 class="title is-5">Realistic Scenarios</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
@@ -272,9 +283,11 @@ abstract: >
     </div>
   </div>
 </section>
+-->
 <!--/ Results -->
 
 <!-- Analysis -->
+<!--
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -285,7 +298,6 @@ abstract: >
             We qualitatively analyze how DASO improves the performance under imbalanced SSL setup. We consider FixMatch as baseline trained on CIFAR10-LT under $ \gamma=100 $ and $ N_1 = 500 $.
           </p>
         </div>
-        <!-- same imbalance -->
         <h3 class="title is-5">Unbiased pseudo-label improves test accuracy.</h3>
         <div class="content has-text-justified">
           <p>
@@ -302,7 +314,6 @@ abstract: >
             Comparison of train curves for the recall and test accuracy values. 
           </h2>
         </div>
-        <!-- different imbalance -->
         <h3 class="title is-5">Tail-class clusters are better identified.</h3>
         <div class="content has-text-justified">
           <p>
@@ -323,30 +334,5 @@ abstract: >
     </div>
   </div>
 </section>
+-->
 <!--/ Analysis -->
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2112.04564">CoSSL</a> introduces a co-learning framework that decouples the learning of representation and classifier in imbalanced SSL.
-          </p>
-          <p>
-            <a href="https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/">DebiasMatch</a> proposes a general debiased learning for pseudo-labels based on counterfactual reasoning and adaptive margins.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2204.02070">Spread Spurious Attribute (SSA)</a> proposes a method of adaptive thresholds for pseudo-labeling that does not rely on the assumption: identical class distributions of labeled and unlabeled data (Secs. 4.2 and 5.4).  
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-  </div>
-</section>
