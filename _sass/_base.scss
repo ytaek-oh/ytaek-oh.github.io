@@ -500,6 +500,34 @@ footer.sticky-bottom {
           border-bottom: 1px solid;
           font-style: normal;
         }
+
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--global-text-color);
+            border-bottom: 1px dashed var(--global-text-color);
+          }
+
+          > em {
+            font-style: normal;
+            color: var(--global-theme-color);
+            border-bottom: 1px dashed var(--global-theme-color);
+            &:hover {
+                border-bottom-style: solid;
+                text-decoration: none;
+            }
+          }
+
+          > span {
+            font-style: normal;
+            color: var(--global-text-color);
+            border-bottom: 1px solid var(--global-text-color);
+          }
+
+        }
       }
       .links {
         a.btn {
