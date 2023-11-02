@@ -31,29 +31,31 @@ abstract: >
           <h1 class="title is-2 publication-title">{{ page.title }}</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="#">Kibaek Park</a><sup>1$\small \dagger$</sup>,</span>
+              <a href="#">Kibaek Park</a><sup>1$\small \ast\dagger$</sup>,</span>
             <span class="author-block">
-              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1$\small \dagger$</sup>,</span>
+              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>2$\small \ast$</sup>,</span>
             <span class="author-block">
-              <a href="#">Soomin Ham</a><sup>1$\small \dagger$</sup>,</span>
+              <a href="#">Soomin Ham</a><sup>2$\small \ast$</sup>,</span>
             <span class="author-block">
-              <a href="https://unist.info/?page_id=194">Kyungdon Joo</a><sup>2$\small \dagger\ast$</sup>,</span><br />
+              <a href="https://unist.info/?page_id=194">Kyungdon Joo</a><sup>3$\small \ast\dagger$</sup>,</span><br />
             <span class="author-block">
-              <a href="#">Hyokyoung Kim</a><sup>3</sup>,</span>
+              <a href="#">Hyokyoung Kim</a><sup>4$\small ¶$</sup>,</span>
             <span class="author-block">
-              <a href="#">Hyoyoung Kum</a><sup>3</sup>,</span>
+              <a href="#">Hyoyoung Kum</a><sup>4$\small ¶$</sup>,</span>
             <span class="author-block">
-              <a href="#">In So Kweon</a><sup>1</sup>,
+              <a href="#">In So Kweon</a><sup>2</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST,&nbsp;</span>
-            <span class="author-block"><sup>2</sup>UNIST,&nbsp;</span>
-            <span class="author-block"><sup>2</sup>TestWorks, Inc.</span>
+            <span class="author-block"><sup>1</sup>KENTECH,&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>2</sup>KAIST,&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>3</sup>UNIST,&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>4</sup>Independent</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>$\small \dagger$</sup><em>Equal contributions,</em>&nbsp;</span>
-            <span class="author-block"><sup>$\ast$</sup><em>Work done at KAIST</em>.</span>
+            <span class="author-block"><sup>$\ast$</sup><em>Equal contributions,</em>&nbsp;</span>
+            <span class="author-block"><sup>$\small \dagger$</sup><em>Work done at KAIST</em>, &nbsp;</span>
+            <span class="author-block"><sup>$\small ¶$</sup><em>Work done at TestWorks, Inc.</em></span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -208,6 +210,24 @@ Our first large-scale sidewalk dataset, the SideGuide will contribute to reducin
   </div>
 </section>
 <!--/ introduction -->
+
+<!-- Download -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Download Request</h2> 
+        <div class="content has-text-justified">
+          <p>
+            In order to access our SideGuide dataset, you must first agree to the terms and conditions by completing a brief survey provided <a href="https://docs.google.com/forms/d/e/1FAIpQLScBmoVoj0d-omBOVCHGjhRislXP0TYzRqaUJOmJcqN6ylQcxQ/viewform" target="_blank">here</a>. You will receive the download link shortly after the approval process is completed. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END -->
+
 
 <!-- motivation -->
 <!--
