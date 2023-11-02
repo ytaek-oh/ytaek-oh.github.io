@@ -31,30 +31,29 @@ abstract: >
           <h1 class="title is-2 publication-title">{{ page.title }}</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="#">Kibaek Park</a><sup>1$\small \ast$</sup>,</span>
+              <a href="#">Kibaek Park</a><sup>1$\small \dagger$</sup>,</span>
             <span class="author-block">
-              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1$\small \ast$</sup>,</span>
+              <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1$\small \dagger$</sup>,</span>
             <span class="author-block">
-              <a href="#">Soomin Ham</a><sup>1$\small \ast$</sup>,</span>
+              <a href="#">Soomin Ham</a><sup>1$\small \dagger$</sup>,</span>
             <span class="author-block">
-              <a href="https://unist.info/?page_id=194">Kyungdon Joo</a><sup>2$\small \ast\dagger$</sup>,</span><br />
+              <a href="https://unist.info/?page_id=194">Kyungdon Joo</a><sup>2$\small \dagger\ast$</sup>,</span><br />
             <span class="author-block">
-              <a href="#">Hyokyoung Kim</a><sup>3$\small ¶$</sup>,</span>
+              <a href="#">Hyokyoung Kim</a><sup>3$\small$</sup>,</span>
             <span class="author-block">
-              <a href="#">Hyoyoung Kum</a><sup>3$\small ¶$</sup>,</span>
+              <a href="#">Hyoyoung Kum</a><sup>3$\small$</sup>,</span>
             <span class="author-block">
               <a href="#">In So Kweon</a><sup>1</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>KAIST,&nbsp;&nbsp;&nbsp;</span>
-            <span class="author-block"><sup>2</sup>UNIST,&nbsp;&nbsp;&nbsp;</span>
-            <span class="author-block"><sup>3</sup>Independent</span>
+            <span class="author-block"><sup>2</sup>The Robotics Institute, Carnegie Mellon University,&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>3</sup>TestWorks, Inc.,</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>$\ast$</sup><em>Equal contributions,</em>&nbsp;</span>
-            <span class="author-block"><sup>$\small \dagger$</sup><em>Work done at KAIST</em>, &nbsp;</span>
-            <span class="author-block"><sup>$\small ¶$</sup><em>Work done at TestWorks, Inc.</em></span>
+            <span class="author-block"><sup>$\small \dagger$</sup><em>Equal contributions,</em>&nbsp;</span>
+            <span class="author-block"><sup>$\ast$</sup><em>Work done at KAIST</em>, &nbsp;</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
