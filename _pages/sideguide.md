@@ -9,6 +9,7 @@ keywords: "Object detection, Instance segmentation, Depth estimation, Stereo mat
 venue: "2020 International Conference on Intelligent Robots and Systems (IROS)"
 pdf: http://ras.papercept.net/images/temp/IROS/files/1873.pdf
 code: https://github.com/ChelseaGH/sidewalk_prototype_AI_Hub
+dataset: https://docs.google.com/forms/d/e/1FAIpQLScBmoVoj0d-omBOVCHGjhRislXP0TYzRqaUJOmJcqN6ylQcxQ/viewform
 bibtex: >
   @inproceedings{park2020sideguide,
     &nbsp;&nbsp;title={Sideguide: a large-scale sidewalk dataset for guiding impaired people},
@@ -66,6 +67,17 @@ abstract: >
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
+                </a>
+              </span>
+              {%- endif %}
+              {%- if page.dataset %}
+              <span class="link-block">
+                <a href="{{ page.dataset }}" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Download</span>
                 </a>
               </span>
               {%- endif %}
