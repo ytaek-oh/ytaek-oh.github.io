@@ -166,6 +166,9 @@
 
         <!-- Links/Buttons -->
         <div class="links">
+        {% if entry.abstract %}
+          <a class="abstract btn btn-sm z-depth-0" role="button">Absract</a>
+        {% endif %}
         {%- if entry.bibtex_show %}
           <a class="bibtex btn btn-sm z-depth-0" role="button">BIBTEX</a>
         {%- endif %}

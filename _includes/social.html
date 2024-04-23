@@ -1,9 +1,9 @@
             {%- if site.cv -%}
             <a href="{{ site.cv | prepend: '/assets/pdf/' }}" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
-            {% endif %}
+            {% endif %}<!--
             {%- if site.email -%}
             <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a>
-            {% endif %}
+            {% endif %}-->
             {%- if site.orcid_id -%}
             <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
             {% endif %}
