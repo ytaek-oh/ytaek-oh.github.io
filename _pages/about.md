@@ -6,7 +6,7 @@ subtitle: >
     <p>Contact: {firstname}.{lastname} [at] kaist.ac.kr</p>
 profile:
   align: right
-  image: yto.jpg
+  image: yto2.jpg
   address: 
 
 news: false  # includes a list of news items
@@ -15,7 +15,7 @@ social: true  # includes social icons at the bottom of the page
 honors: true
 ---
 
-<p>I am a Ph.D. student co-advised by Prof. <a href="http://rcv.kaist.ac.kr/" target="_blank">In So Kweon</a> and Prof. <a href="https://siit.kaist.ac.kr/" target="_blank">Junmo Kim</a> at <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a>, <br />and was a research intern at <a href="https://www.lgresearch.ai/" target="_blank">LG AI Reseach</a>, closely working with Dr. <a href="https://scholar.google.com/citations?user=-__ECRsAAAAJ&hl=en" target="_blank">Pyunghwan Ahn</a> and Dr. <a href="https://scholar.google.com/citations?user=HPd_1LMAAAAJ&hl=en" target="_blank">Jinhyung Kim</a>.
+<p>I am a Ph.D. student co-advised by Prof. <a href="http://rcv.kaist.ac.kr/" target="_blank">In So Kweon</a> and Prof. <a href="https://siit.kaist.ac.kr/" target="_blank">Junmo Kim</a> at <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a>, and was a research intern at <a href="https://www.lgresearch.ai/" target="_blank">LG AI Reseach</a>, closely working with Dr. <a href="https://scholar.google.com/citations?user=-__ECRsAAAAJ&hl=en" target="_blank">Pyunghwan Ahn</a> and Dr. <a href="https://scholar.google.com/citations?user=HPd_1LMAAAAJ&hl=en" target="_blank">Jinhyung Kim</a>.
 </p> 
 
 <p>My research interest aims to build robust recognition system for image and video understanding under limited and/or biased data. Towards this goal, I have been working on data-efficient learning techniques in image and video domain. I also have interest in vision and language models, specifically for enhancing visio-linguistic compositionality. 
