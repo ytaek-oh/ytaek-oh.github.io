@@ -2,26 +2,37 @@
 layout: none
 title: FSC-CLIP
 permalink: /fsc-clip
-description: We present a novel framework to increase compositional reasoning in pre-trained vision and language models (VLMs) without sacrificing the multi-modal capabilities..
+description: We present a novel framework to increase compositional reasoning in pre-trained vision and language models (VLMs) without sacrificing the multi-modal capabilities.
 keywords: "image text matching, cross-modal application, multimodality"
 title: "Preserving Multi-Modal Capabilities of Pre-trained VLMs for Improving Vision-Linguistic Compositionality"
 venue: "<b>EMNLP 2024 (Long, Main)</b>"
-arxiv: 
+arxiv: https://arxiv.org/abs/2410.05210
 code: https://github.com/ytaek-oh/fsc-clip
 model: https://huggingface.co/ytaek-oh/fsc-clip
 slide: 
 poster: 
 bibtex: >
-  @inproceedings{oh2024preserving<br />&nbsp;&nbsp;TBU<br />}
+  @article{oh2024preserving, <br />
+  &nbsp;&nbsp; title={Preserving Multi-Modal Capabilities of Pre-trained VLMs for Improving Vision-Linguistic Compositionality}, <br />
+  &nbsp;&nbsp; author={Oh, Youngtaek and Cho, Jae Won and Kim, Dong-Jin and Kweon, In So and Kim, Junmo}, <br />
+  &nbsp;&nbsp; journal={arXiv preprint arXiv:2410.05210}, <br />
+  &nbsp;&nbsp; year={2024}, <br />
+  }<br /><br />
+  @article{oh2024exploring, <br />
+  &nbsp;&nbsp; title={Exploring the Spectrum of Visio-Linguistic Compositionality and Recognition}, <br />
+  &nbsp;&nbsp; author={Oh, Youngtaek and Ahn, Pyunghwan and Kim, Jinhyung and Song, Gwangmo and Lee, Soonyoung and Kweon, In So and Kim, Junmo}, <br />
+  &nbsp;&nbsp; journal={arXiv preprint arXiv:2406.09388}, <br />
+  &nbsp;&nbsp; year={2024}, <br />
+  }
 abstract: >
   <p>
   In this paper, we propose a new method to enhance compositional understanding in pre-trained vision and language models (VLMs) without sacrificing performance in zero-shot multi-modal tasks.
   </p>
   <p>
-    Traditional fine-tuning approaches often improve compositional reasoning at the cost of degrading multi-modal capabilities, primarily due to the use of global hard negative (HN) loss, which contrasts global representations of images and texts. This global HN loss pushes HN texts that are highly similar to the original ones, damaging the model’s multi-modal representations. 
+    Traditional fine-tuning approaches often improve compositional reasoning at the cost of degrading multi-modal capabilities, primarily due to the use of global hard negative (HN) loss, which contrasts global representations of images and texts. This global HN loss pushes HN texts that are highly similar to the original ones, damaging the model's multi-modal representations. 
   </p>
   <p>
-    To overcome this limitation, we propose Fine-grained Selective Calibrated CLIP (FSC-CLIP), which integrates local hard negative loss and selective calibrated regularization. These innovations provide fine-grained negative supervision while preserving the model’s representational integrity. 
+    To overcome this limitation, we propose Fine-grained Selective Calibrated CLIP (FSC-CLIP), which integrates local hard negative loss and selective calibrated regularization. These innovations provide fine-grained negative supervision while preserving the model's representational integrity. 
   </p>
   <p>
     Our extensive evaluations across diverse benchmarks for both compositionality and multi-modal tasks show that FSC-CLIP not only achieves compositionality on par with state-of-the-art models but also retains strong multi-modal capabilities.
