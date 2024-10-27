@@ -9,7 +9,7 @@ venue: "<b>EMNLP 2024 (Long, Main)</b>"
 arxiv: https://arxiv.org/abs/2410.05210
 code: https://github.com/ytaek-oh/fsc-clip
 model: https://huggingface.co/ytaek-oh/fsc-clip
-slide: 
+slide: fsc-clip/emnlp_compositionality_slide.pdf
 poster: 
 bibtex: >
   @article{oh2024preserving, <br />
@@ -190,7 +190,7 @@ abstract: >
               {%- if page.slide %}
               <!-- slide Link. -->
               <span class="link-block">
-                <a href="{{ page.slide | prepend: '/assets/daso/' }}" target="_blank"
+                <a href="{{ page.slide | prepend: '/assets/' }}" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-file-powerpoint"></i>
@@ -202,7 +202,7 @@ abstract: >
               {%- if page.poster %}
               <!-- poster Link. -->
               <span class="link-block">
-                <a href="{{ page.poster | prepend: '/assets/daso/' }}" target="_blank"
+                <a href="{{ page.poster | prepend: '/assets/' }}" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-powerpoint"></i>
