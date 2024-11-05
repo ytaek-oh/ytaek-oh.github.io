@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-09-20
 inline: true
 ---
 
-A simple inline announcement.
+Our new <a href="https://ytaek-oh.github.io/fsc-clip" target="_blanck">VL compositionality paper</a> has been accepted to EMNLP 2024! See you in Miami🌊🏖️

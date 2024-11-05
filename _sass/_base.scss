@@ -231,6 +231,12 @@ blockquote {
   color: var(--global-text-color);
 }
 
+.news table.table-sm th, .news table.table-sm td {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+
 .news table th {
   font-size: 1.1rem;
   color: var(--global-text-color);
