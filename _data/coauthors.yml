@@ -12,6 +12,8 @@
     url: https://www.linkedin.com/in/myungchul-jaden-kim/
   - firstname: ["Junmo"]
     url: http://siit.kaist.ac.kr/Faculty
+  - firstname: ["Si-Woo"]
+    url: https://siwoo-kim.com/
 
 "Joo":
   - firstname: ["Kyungdon"]
@@ -44,3 +46,7 @@
 "Mitsufuji":
   - firstname: ["Yuki"]
     url: https://www.yukimitsufuji.com/
+
+"Jeon":
+  - firstname: ["MinJu"]
+    url: https://forminju.github.io/
